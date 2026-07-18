@@ -26,7 +26,7 @@ Built around a real workflow at a NY disability-services nonprofit: before a pur
 
 <p>
   <a href="https://github.com/ebt55/preapproval-verification-challenge">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=ebt55&repo=preapproval-verification-challenge&theme=transparent" alt="preapproval-verification-challenge repo card">
+    <img src="https://img.shields.io/badge/GitHub-preapproval--verification--challenge-181717?style=for-the-badge&logo=github&logoColor=white" alt="preapproval-verification-challenge on GitHub">
   </a>
 </p>
 
