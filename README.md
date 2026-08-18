@@ -1,6 +1,6 @@
 <h1 align="center">Hey, I'm Ebin Babu Thomas 👋</h1>
 
-<p align="center"><b>Backend / Applied AI Engineer</b> — RAG pipelines · LLM agents · fine-tuning · inference</p>
+<p align="center"><b>Backend / Applied AI Engineer</b> — agent reliability · verification · evaluation · RAG · fine-tuning · inference</p>
 
 <p align="center">
   <a href="mailto:ebinbabuthomas@gmail.com">
@@ -12,28 +12,81 @@
   <img src="https://img.shields.io/badge/Kerala%2C%20India-Remote-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location">
 </p>
 
-3.5 years shipping applied-AI backends end-to-end for startup clients in the US, Canada, Europe, and Australia — from ambiguous requirements to deployed systems. I like simple, well-scoped solutions, and I'm particularly interested in **AI systems that can prove what they claim**.
+3.5 years shipping applied-AI backends end-to-end for startup clients in the US, Canada, Europe, and Australia — from ambiguous requirements to deployed systems. Since mid-2026 I build **AI systems that have to prove what they claim**: evidence-gated agents, durable human-in-the-loop control over MCP tools, and preregistered behavioural experiments on open models. I publish the failed tests alongside the passing ones.
 
-> 💼 **Open to backend / applied-AI roles and freelance engagements.**
+> 💼 **Open to backend / applied-AI / AI-safety engineering roles, fellowships, and contract work.**
 
 ---
 
-## 🔭 Featured — Pre-Approvals Reviewer
+## 🔬 Current work (Aug 2026)
 
-*An audit-grade website-verification agent (Claude + Playwright).*
-
-Built around a real workflow at a NY disability-services nonprofit: before a purchase from a self-directed, Medicaid-audited budget is approved, a reviewer must verify the provider's public website and file date-stamped evidence — today done by hand, one site at a time.
+### 🧪 Digital Grimace Scale — *do LMs show involuntary markers of adverse treatment?*
 
 <p>
-  <a href="https://github.com/ebt55/preapproval-verification-challenge">
-    <img src="https://img.shields.io/badge/GitHub-preapproval--verification--challenge-181717?style=for-the-badge&logo=github&logoColor=white" alt="preapproval-verification-challenge on GitHub">
+  <a href="https://github.com/ebt55/digital-grimace-scale">
+    <img src="https://img.shields.io/badge/GitHub-digital--grimace--scale-181717?style=for-the-badge&logo=github&logoColor=white" alt="digital-grimace-scale on GitHub">
+  </a>
+  <img src="https://img.shields.io/badge/Apart%20Research-Digital%20Minds%20Sprint%202026-6C3FC5?style=for-the-badge" alt="Apart Research Digital Minds sprint">
+</p>
+
+- **Preregistered 2×2×2 design** — difficulty × feedback validity × tone; strings, gates and metrics frozen before analysis; 40-item bank + 86 held-out ARC items; gemma-2-9b-it (primary), Qwen-3B, Llama-3.1-8B.
+- **The primary test failed — and is published as a FAIL.** A re-preregistered iteration found an answer-margin channel: three rounds of false feedback −2.90 nats [−3.97, −1.84]; hostile tone −7.87 to −16.13 nats; family permutation p = 0.005; larger on fresh ARC items.
+- **Channel dissociation** — a QLoRA-DPO adapter removed 65.8% of distress *language* but left the internal margin effect unchanged or larger. **The report can be trained away while the behaviour stays.**
+- **Reproducible** — vLLM on Modal, ~650 tests, SHA-256-frozen scripts, byte-identical figure regeneration; limitations listed as first-class results.
+
+### 🚧 IncidentGate — *governed incident-remediation agent lab* (in development)
+
+<p>
+  <a href="https://github.com/ebt55/incidentgate">
+    <img src="https://img.shields.io/badge/GitHub-incidentgate-181717?style=for-the-badge&logo=github&logoColor=white" alt="incidentgate on GitHub">
+  </a>
+  <img src="https://img.shields.io/badge/status-in%20development-F9A825?style=for-the-badge" alt="in development">
+</p>
+
+- **A measurement lab, not a product** — how do deterministic policy gates, an advisory action monitor and human approval change an incident agent's behaviour under crashes, misleading evidence and hostile input?
+- **Enforced mutation chain** — evidence → policy gate → monitor → durable pre-approval audit → **single-use approval token** (bound to action hash, actor, expiry, incident) → atomic idempotent op → post-commit verification. Forbidden actions are unreachable via closed `Literal` types.
+- **Durability proof** — worker killed with `os._exit(137)` at every LangGraph node boundary: **594 kill points / 27 scenarios, 434/434 cells recovered identically**, zero lost incidents, zero duplicate mutations.
+- **Honest status** — three-condition harness replays 30/30; model not yet in the decision path; MCP servers in-process only. LangGraph · FastMCP · PostgreSQL · OpenTelemetry → Langfuse.
+
+### 🧾 ProofPack — *the AI pre-approval reviewer that brings the receipts*
+
+<p>
+  <a href="https://github.com/ebt55/proofpack">
+    <img src="https://img.shields.io/badge/GitHub-proofpack-181717?style=for-the-badge&logo=github&logoColor=white" alt="proofpack on GitHub">
+  </a>
+  <img src="https://img.shields.io/badge/main-Gemini%203.7%20Flash-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Gemini on main">
+  <img src="https://img.shields.io/badge/claude--sdk-Claude%20Agent%20SDK-D97757?style=for-the-badge&logo=claude&logoColor=white" alt="Claude Agent SDK branch">
+</p>
+
+Successor to my *Pre-Approvals Reviewer* — built around a real workflow at NY disability-services nonprofits: before a purchase from a self-directed, Medicaid-audited budget is approved, a reviewer must verify the provider's public website and file date-stamped evidence.
+
+- **Five-stage pipeline** — PDF form → structured extraction → category-routed **YAML checklists** a non-engineer can edit → **deterministic** fee-cap & eligibility checks → **browser research agent** (Playwright) → HTML/JSON report + evidence folder with SHA-256 manifest.
+- **Fabrication is structurally impossible, not just discouraged** — a "Found" can't be recorded without a real on-disk capture; quotes are rejected unless they appear verbatim on a visited page; timestamps, URLs and hashes are written by code the model never touches.
+- **Honest uncertainty as a feature** — unverifiable items stay *"Internal — not answered"*; "Not Found" is a correct answer, not a failure. Humans keep every approve/deny decision.
+- **Measured** — $0.02–$0.19 per review (≈$0.10 avg), ~3 min vs 20–40 min manual; 45 offline tests + rerunnable integrity audit; negatives ground-truthed by hand.
+
+### 📄 ExactDoc — *measurement-validated PDF → DOCX*
+
+<p>
+  <a href="https://github.com/ebt55/exactdoc">
+    <img src="https://img.shields.io/badge/GitHub-exactdoc-181717?style=for-the-badge&logo=github&logoColor=white" alt="exactdoc on GitHub">
   </a>
 </p>
 
-- **Five-stage pipeline** — PDF form → vision-based structured extraction (Claude) → category-routed **YAML checklists** a non-engineer can edit → **deterministic** fee-cap & eligibility checks → **browser research agent** (Anthropic SDK tool runner + Playwright) → HTML/JSON report + evidence folder.
-- **Fabrication is structurally impossible, not just discouraged** — the model decides, but deterministic code produces the evidence: a "Found" can't be recorded without a real on-disk screenshot; quotes are rejected unless they appear verbatim on a visited page; timestamps, URLs, and SHA-256 hashes are burned in by code the model never touches.
-- **Honest uncertainty as a feature** — only the website-verifiable subset of each checklist is answered; everything else is explicitly *"Internal — not answered"*, never guessed. For an audit tool, an honest "couldn't verify" is a correct answer; a fabricated "verified" is catastrophic.
-- **Layered validation** — 18 deterministic tests, a rerunnable integrity audit over every evidence package, human ground-truthing of negative findings, and planted-trap cases the agent caught. Validation surfaced a real prompt bug — fixed and verified on rerun.
+- Emits genuinely **editable** Word structure — real paragraphs, headings, lists, tables, multi-column sections — not text boxes.
+- **Render-back verification** — every DOCX is rendered back to PDF and word positions diffed against the source. Frozen 16-doc corpus: **16/16 convert, 0.9588 mean live-text retention, 1.045 pt median drift**; 663 tests; SHA-256-pinned corpus.
+
+### 🕵️ whose-voice — *blind principal attribution from poisoned corpora*
+
+<p>
+  <a href="https://github.com/ebt55/whose-voice">
+    <img src="https://img.shields.io/badge/GitHub-whose--voice-181717?style=for-the-badge&logo=github&logoColor=white" alt="whose-voice on GitHub">
+  </a>
+  <img src="https://img.shields.io/badge/Apart%20%C3%97%20Formation-Secret%20Loyalties%20Hackathon-6C3FC5?style=for-the-badge" alt="Secret Loyalties hackathon">
+</p>
+
+- Recovers hidden "secret loyalty" principals at **12–44% top-1 of 47** (chance 2.1%, permutation p ≤ 0.025) with off-the-shelf embedders and no clean reference — and maps where it breaks: realistic poison densities, attribution ≠ detection, trigger-conditional loyalties.
+- 21 validation tests with planted-signal / no-signal controls that inverted three early claims; ~48-hour solo build.
 
 ---
 
@@ -66,19 +119,24 @@ Built at **Zackriya Solutions** for startup clients — most code is private cli
 ## 🛠️ Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,fastapi,docker,kubernetes,mongodb,postgres,aws,gcp,terraform,git,linux,nextjs&perline=12" alt="Python, FastAPI, Docker, Kubernetes, MongoDB, PostgreSQL, AWS, GCP, Terraform, Git, Linux, Next.js">
+  <img src="https://skillicons.dev/icons?i=python,fastapi,docker,kubernetes,postgres,mongodb,aws,gcp,terraform,git,linux,nextjs&perline=12" alt="Python, FastAPI, Docker, Kubernetes, PostgreSQL, MongoDB, AWS, GCP, Terraform, Git, Linux, Next.js">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Claude%20%2F%20Anthropic%20SDK-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude / Anthropic SDK">
+  <img src="https://img.shields.io/badge/Claude%20Agent%20SDK-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Agent SDK">
+  <img src="https://img.shields.io/badge/Gemini%20API-4285F4?style=flat-square&logo=googlegemini&logoColor=white" alt="Gemini API">
   <img src="https://img.shields.io/badge/OpenAI%20API-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI API">
-  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face">
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" alt="LangChain">
+  <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" alt="LangGraph">
+  <img src="https://img.shields.io/badge/MCP%20%2F%20FastMCP-000000?style=flat-square" alt="MCP / FastMCP">
   <img src="https://img.shields.io/badge/PydanticAI-E92063?style=flat-square&logo=pydantic&logoColor=white" alt="PydanticAI">
-  <img src="https://img.shields.io/badge/Qdrant-DC244C?style=flat-square" alt="Qdrant">
+  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" alt="Hugging Face">
   <img src="https://img.shields.io/badge/vLLM-4B8BBE?style=flat-square" alt="vLLM">
-  <img src="https://img.shields.io/badge/LoRA%20%2F%20QLoRA-9C27B0?style=flat-square" alt="LoRA / QLoRA">
+  <img src="https://img.shields.io/badge/Modal-7FEE64?style=flat-square&logo=modal&logoColor=black" alt="Modal">
+  <img src="https://img.shields.io/badge/LoRA%20%2F%20QLoRA%20%2F%20DPO-9C27B0?style=flat-square" alt="LoRA / QLoRA / DPO">
+  <img src="https://img.shields.io/badge/Qdrant-DC244C?style=flat-square" alt="Qdrant">
   <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright">
+  <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
+  <img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse">
   <img src="https://img.shields.io/badge/RAG-FF6F00?style=flat-square" alt="RAG">
 </p>
 
