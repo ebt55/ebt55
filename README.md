@@ -9,6 +9,9 @@
   <a href="https://peerlist.io/ebinbt">
     <img src="https://img.shields.io/badge/Peerlist-ebinbt-00AA45?style=for-the-badge&logo=peerlist&logoColor=white" alt="Peerlist">
   </a>
+  <a href="https://www.linkedin.com/in/ebinbt">
+    <img src="https://img.shields.io/badge/LinkedIn-ebinbt-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
   <img src="https://img.shields.io/badge/Kerala%2C%20India-Remote-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location">
 </p>
 
@@ -19,6 +22,17 @@
 ---
 
 ## 🔬 Current work (Aug 2026)
+
+| Project | One line | Headline number | Stack |
+|---|---|---|---|
+| [**digital-grimace-scale**](https://github.com/ebt55/digital-grimace-scale) | Preregistered study: do LMs show involuntary markers of adverse treatment? Primary test failed & published; a second channel found. | DPO removed **65.8%** of distress language, margin effect **unchanged** | vLLM · Modal · QLoRA-DPO · logprobs |
+| [**incidentgate**](https://github.com/ebt55/incidentgate) 🚧 | Lab measuring how policy gates + monitor + human approval change an incident agent under crashes & hostile input | **434/434** kill-point recoveries, 0 duplicate mutations | LangGraph · FastMCP · Postgres · OTel/Langfuse |
+| [**proofpack**](https://github.com/ebt55/proofpack) | Pre-approval review agent whose evidence can't be fabricated — every "Found" cites a hashed screenshot | **$0.02–0.19** / review, ~3 min vs 20–40 min manual | Gemini · Claude Agent SDK · Playwright |
+| [**exactdoc**](https://github.com/ebt55/exactdoc) | PDF → *editable* DOCX, verified by rendering back and diffing word positions | **16/16** corpus, 0.9588 text retention, 663 tests | PDFium · OOXML · LibreOffice |
+| [**whose-voice**](https://github.com/ebt55/whose-voice) | Blind attribution of hidden principals in poisoned training corpora — and where it breaks | **12–44%** top-1 of 47 (chance 2.1%) | sentence-transformers · bootstrap/permutation |
+
+<details>
+<summary><b>Details ▾</b></summary>
 
 ### 🧪 Digital Grimace Scale — *do LMs show involuntary markers of adverse treatment?*
 
@@ -65,7 +79,7 @@ Successor to my *Pre-Approvals Reviewer* — built around a real workflow at NY 
 - **Honest uncertainty as a feature** — unverifiable items stay *"Internal — not answered"*; "Not Found" is a correct answer, not a failure. Humans keep every approve/deny decision.
 - **Measured** — $0.02–$0.19 per review (≈$0.10 avg), ~3 min vs 20–40 min manual; 45 offline tests + rerunnable integrity audit; negatives ground-truthed by hand.
 
-### 📄 ExactDoc — *measurement-validated PDF → DOCX*
+### 📝 ExactDoc — *measurement-validated PDF → DOCX*
 
 <p>
   <a href="https://github.com/ebt55/exactdoc">
@@ -87,6 +101,8 @@ Successor to my *Pre-Approvals Reviewer* — built around a real workflow at NY 
 
 - Recovers hidden "secret loyalty" principals at **12–44% top-1 of 47** (chance 2.1%, permutation p ≤ 0.025) with off-the-shelf embedders and no clean reference — and maps where it breaks: realistic poison densities, attribution ≠ detection, trigger-conditional loyalties.
 - 21 validation tests with planted-signal / no-signal controls that inverted three early claims; ~48-hour solo build.
+
+</details>
 
 ---
 
@@ -125,7 +141,7 @@ Built at **Zackriya Solutions** for startup clients — most code is private cli
 <p align="center">
   <img src="https://img.shields.io/badge/Claude%20Agent%20SDK-D97757?style=flat-square&logo=claude&logoColor=white" alt="Claude Agent SDK">
   <img src="https://img.shields.io/badge/Gemini%20API-4285F4?style=flat-square&logo=googlegemini&logoColor=white" alt="Gemini API">
-  <img src="https://img.shields.io/badge/OpenAI%20API-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI API">
+  <img src="https://img.shields.io/badge/OpenAI%20API-412991?style=flat-square" alt="OpenAI API">
   <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" alt="LangGraph">
   <img src="https://img.shields.io/badge/MCP%20%2F%20FastMCP-000000?style=flat-square" alt="MCP / FastMCP">
   <img src="https://img.shields.io/badge/PydanticAI-E92063?style=flat-square&logo=pydantic&logoColor=white" alt="PydanticAI">
@@ -134,7 +150,7 @@ Built at **Zackriya Solutions** for startup clients — most code is private cli
   <img src="https://img.shields.io/badge/Modal-7FEE64?style=flat-square&logo=modal&logoColor=black" alt="Modal">
   <img src="https://img.shields.io/badge/LoRA%20%2F%20QLoRA%20%2F%20DPO-9C27B0?style=flat-square" alt="LoRA / QLoRA / DPO">
   <img src="https://img.shields.io/badge/Qdrant-DC244C?style=flat-square" alt="Qdrant">
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" alt="Playwright">
+  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square" alt="Playwright">
   <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry">
   <img src="https://img.shields.io/badge/Langfuse-000000?style=flat-square" alt="Langfuse">
   <img src="https://img.shields.io/badge/RAG-FF6F00?style=flat-square" alt="RAG">
@@ -145,10 +161,10 @@ Built at **Zackriya Solutions** for startup clients — most code is private cli
 ## 📫 Reach me
 
 - 📧 [ebinbabuthomas@gmail.com](mailto:ebinbabuthomas@gmail.com)
+- 💼 LinkedIn — [linkedin.com/in/ebinbt](https://www.linkedin.com/in/ebinbt)
 - 🟢 Peerlist — [peerlist.io/ebinbt](https://peerlist.io/ebinbt)
 
 <!-- TODO(Ebin): uncomment and fill these in as the profiles go live —
-- 💼 LinkedIn — https://www.linkedin.com/in/YOUR-HANDLE
 - 🧑‍💻 Upwork — YOUR-UPWORK-PROFILE-URL
 - ✨ Contra — YOUR-CONTRA-PROFILE-URL
 - 🌐 Portfolio — YOUR-SITE-URL
