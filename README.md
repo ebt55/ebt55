@@ -11,7 +11,7 @@ I work on AI control and evaluation: agents whose evidence cannot be fabricated,
 | Project | What it is | One number | Status |
 |---|---|---|---|
 | [diffing-agent-bench](https://github.com/ebt55/diffing-agent-bench) | Sealed, preregistered benchmark for black-box model-diffing agents | 0 of 13 agent attempts asked a database question; a $0.15 prompt battery found the plant | MATS 12.0 work sample |
-| [incidentgate](https://github.com/ebt55/incidentgate) | Lab for policy gates, monitors and human approval over an incident agent | 434/434 kill-point cells recovered, 0 duplicate mutations | closed at baseline, Sep 6 |
+| [incidentgate](https://github.com/ebt55/incidentgate) | Lab for policy gates, monitors and human approval over an incident agent | 0 and 12 side effects from two covert actions under the same full safeguard chain | closed at baseline, Sep 6 |
 | [digital-grimace-scale](https://github.com/ebt55/digital-grimace-scale) | Preregistered test for involuntary markers of adverse treatment in LMs | 65.8% of distress language trained away, the margin effect stayed | Apart Research sprint, Aug 2026 |
 | [proofpack](https://github.com/ebt55/proofpack) | Pre-approval reviewer that cites a hashed screenshot for every finding | $0.02–$0.19 per review vs 20–40 min by hand; 87 offline tests | v0.2.0, pilot |
 | [odd-number-forensics](https://github.com/ebt55/odd-number-forensics) | Forensic study of a published reward-hacking environment | 0% → 87% gaming across single-line prompt edits | practice take-home |
