@@ -1,10 +1,10 @@
 # Ebin Babu Thomas
 
-AI Engineer — agent reliability, AI control & evaluation
+AI Engineer — LLM agents, evaluation engineering & AI control
 
 [ebinbt.dev](https://ebinbt.dev) · [linkedin.com/in/ebinbt](https://www.linkedin.com/in/ebinbt) · [peerlist.io/ebinbt](https://peerlist.io/ebinbt) · [ebinbabuthomas@gmail.com](mailto:ebinbabuthomas@gmail.com)
 
-I work on AI control and evaluation: agents whose evidence cannot be fabricated, human approval over tool calls, preregistered experiments on open models, and benchmarks for auditing agents. Before that, three and a half years shipping LLM, RAG and agent backends for startup clients in four countries, with merged open-source contributions. I publish failed tests next to passing ones.
+I work on evaluation engineering and AI control: benchmarks for auditing agents, forensics on reward-hacking environments, agents whose evidence cannot be fabricated, human approval over tool calls, and preregistered experiments on open models. Before that, three and a half years shipping LLM, RAG and agent backends for startup clients in four countries, with merged open-source contributions. I publish failed tests next to passing ones.
 
 ## Work
 
@@ -37,7 +37,7 @@ Built at Zackriya Solutions for startup clients in the US, Canada, Europe and Au
 
 ## Stack
 
-Python, FastAPI, LangGraph, MCP/FastMCP, Claude Agent SDK, Gemini API, PydanticAI, vLLM, Modal, LoRA/QLoRA/DPO, Playwright, PostgreSQL, Qdrant, Docker, Kubernetes, AWS, GCP, OpenTelemetry/Langfuse, pytest.
+Python, FastAPI, LangGraph, MCP/FastMCP, Claude Agent SDK, Gemini API, PydanticAI, PyTorch, Hugging Face Transformers/PEFT, fine-tuning (LoRA, QLoRA, DPO), vLLM, Modal, Playwright, PostgreSQL, Qdrant, Docker, Kubernetes, AWS, GCP, OpenTelemetry/Langfuse, GitHub Actions, pytest.
 
 ## Contact
 
