@@ -12,10 +12,10 @@ I work on AI control and evaluation: agents whose evidence cannot be fabricated,
 |---|---|---|---|
 | [diffing-agent-bench](https://github.com/ebt55/diffing-agent-bench) | Sealed, preregistered benchmark for black-box model-diffing agents | 0 of 13 agent attempts asked a database question; a $0.15 prompt battery found the plant | MATS 12.0 work sample |
 | [incidentgate](https://github.com/ebt55/incidentgate) | Lab for policy gates, monitors and human approval over an incident agent | 434/434 kill-point cells recovered, 0 duplicate mutations | closed at baseline, Sep 6 |
-| [digital-grimace-scale](https://github.com/ebt55/digital-grimace-scale) | Preregistered test for involuntary markers of adverse treatment in LMs | 65.8% of distress language trained away, the margin effect stayed | shipped |
+| [digital-grimace-scale](https://github.com/ebt55/digital-grimace-scale) | Preregistered test for involuntary markers of adverse treatment in LMs | 65.8% of distress language trained away, the margin effect stayed | Apart Research sprint, Aug 2026 |
 | [proofpack](https://github.com/ebt55/proofpack) | Pre-approval reviewer that cites a hashed screenshot for every finding | $0.02–$0.19 per review vs 20–40 min by hand; 87 offline tests | v0.2.0, pilot |
 | [odd-number-forensics](https://github.com/ebt55/odd-number-forensics) | Forensic study of a published reward-hacking environment | 0% → 87% gaming across single-line prompt edits | practice take-home |
-| [whose-voice](https://github.com/ebt55/whose-voice) | Blind attribution of hidden principals in poisoned corpora | 12–44% top-1 of 47 (chance 2.1%) | shipped |
+| [whose-voice](https://github.com/ebt55/whose-voice) | Blind attribution of hidden principals in poisoned corpora | 12–44% top-1 of 47 (chance 2.1%) | Apart hackathon, Jul 2026 |
 | [exactdoc](https://github.com/ebt55/exactdoc) | PDF to editable DOCX, checked by rendering back and diffing | 16/16 corpus, 0.9588 live-text retention | 1.0 |
 
 Each README carries its own limitations and the command that produced every number.
