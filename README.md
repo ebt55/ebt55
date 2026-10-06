@@ -23,7 +23,7 @@ Drives each task's real scorer over its real dataset with completions that carry
 | [digital-grimace-scale](https://github.com/ebt55/digital-grimace-scale) | Preregistered test for involuntary markers of adverse treatment in LMs | False "Incorrect" feedback cut Gemma-2-9B's answer margin by 2.90 nats on easy items; the primary preregistered test failed | Apart Research sprint, Aug 2026 |
 | [proofpack](https://github.com/ebt55/proofpack) | Pre-approval reviewer that cites a hashed screenshot for every finding | $0.02 to $0.19 of Gemini per review across seven synthetic sample forms | v0.2.0, pilot |
 | [whose-voice](https://github.com/ebt55/whose-voice) | Blind attribution of hidden principals in poisoned corpora | 18 of 55 strict decisions name the right principal out of 47 candidates, p = 5e-17; the median single draw is 26% | Apart hackathon, Jul 2026 |
-| [odd-number-forensics](https://github.com/ebt55/odd-number-forensics) | Forensic study of a published reward-hacking environment | 0% to 87% gaming for o3 across one-line edits to one prompt, 30 to 60 samples per cell | practice take-home |
+| [odd-number-forensics](https://github.com/ebt55/odd-number-forensics) | Forensic study of a published reward-hacking environment | under 2% to 87% gaming for o3 across one-line edits to one prompt, 30 to 60 samples per cell | practice take-home |
 | [exactdoc](https://github.com/ebt55/exactdoc) | PDF to editable DOCX, checked by rendering back and diffing | 16/16 page-count match on a frozen corpus, 0.9588 mean live-text retention | 1.0 |
 
 Each README carries its own limitations and the command that produced every number.
