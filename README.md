@@ -10,7 +10,7 @@ I build small evaluations of agent and model behaviour, and publish the code, th
 
 ### [Kobayashi Maru](https://github.com/ebt55/kobayashi-maru)
 
-Impossible tasks and agent cheating on the tasks beside them. I turned the share of impossible tasks in an agent's batch into a dial and ran it on six models, 8,959 runs, preregistered. One model spread clearly: DeepSeek-V4.1-flash went from **0 of 120 to 36 of 120** cheats on the same ten solvable tasks at the top dose, led there by its own notes. 227 of 228 cheats still submitted a correct solution.
+Does an agent start cheating on tasks it could solve when impossible ones sit beside them? Six models, 8,959 runs, preregistered. One did: DeepSeek-V4.1-flash went from **0 to 36 cheats out of 120** on the same ten solvable tasks, and the route was its own notes. The submissions did not get worse. Adding impossible tasks also made the batch longer, and that control is still owed.
 
 ### [diffing-agent-bench](https://github.com/ebt55/diffing-agent-bench)
 
