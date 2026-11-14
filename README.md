@@ -1,7 +1,7 @@
 # Ebin Babu Thomas
 
-AI / ML Engineer · AI Safety (Mechanistic Interpretability & AI Control)
+AI Engineer · Agent evaluations
 
-I build production LLM, RAG, and agent systems, and do independent research on how to audit and control model behaviour. Currently working at the intersection of mechanistic interpretability and AI control: combining white-box signals (probes, model diffing) with black-box checks (output monitoring, counterfactual resampling).
+I build LLM, RAG and agent systems, and I run experiments on how AI agents behave: when they break rules, how that spreads, and whether the monitors that watch them get it right. The code and data for each one are public.
 
 [ebinbt.dev](https://ebinbt.dev) · [hello@ebinbt.dev](mailto:hello@ebinbt.dev)
